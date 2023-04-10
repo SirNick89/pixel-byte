@@ -25,20 +25,15 @@ const ExperienceCard = ({ experience }) => {
         <div className='flex justify-center items-center w-full h-full'>
           <img
             src={experience.icon}
-            alt={experience.company_name}
-            className='w-[100%] h-[100%] object-contain'
+            alt={experience.title}
+            className='w-[60%] h-[60%] object-contain'
           />
         </div>
       }
     >
       <div>
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p
-          className='text-secondary text-[16px] font-semibold'
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
+       
       </div>
 
       <ul className='mt-5 list-none ml-5 space-y-2'>
@@ -46,11 +41,11 @@ const ExperienceCard = ({ experience }) => {
            
           <li>
             <img src={experience.asset}
-            alt='a'
-            className='w-[80%] h-[80%] object-contain'
+            className='w-[100%] h-[100%] object-contain'
             />
           </li>
-        
+         
+         
       </ul>
     </VerticalTimelineElement>
   );
@@ -61,10 +56,10 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          Some of our designs
+          Services we provide to you
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-         Works
+        Services
         </h2>
       </motion.div>
 

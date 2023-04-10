@@ -1,7 +1,6 @@
-import { motion} from "framer-motion";
+import { easeIn, motion} from "framer-motion";
 import { styles } from "../styles";
 import { art } from "../assets";
-import { useState } from "react";
 
 
 const Hero = () => {
@@ -13,10 +12,9 @@ const Hero = () => {
  <section className="relative w-full h-screen mx-auto">
 <motion.div 
 
-initial={{ opacity: 0, scale: 1 }}
-animate={{ opacity: 1, scale: 1 }}
-transition={{ duration: 1 }}
-
+  initial={{ opacity: 0, scale: 1 }}
+  animate={{ opacity: 1, scale: 1}}
+  transition={{ duration: 0.75, ease: easeIn}}
 className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
 <div className="flex flex-col justify-center items-center mt-5">
   </div>
@@ -35,7 +33,7 @@ className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto fl
 <motion.img
   initial={{ opacity: 0, scale: 1 }}
   animate={{ opacity: 1, scale: 1}}
-  transition={{ duration: 1 }}
+  transition={{ duration: 0.75, ease: easeIn}}
 src={art} className="hero-banner-img"/>
 
 
